@@ -1,3 +1,13 @@
 .invisible{
     display: none;
 }
+
+.card{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.green-background{
+    background-color: green;
+}
