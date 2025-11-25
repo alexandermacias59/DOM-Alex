@@ -11,3 +11,21 @@
 .green-background{
     background-color: green;
 }
+
+.fruit-card{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 8px;
+}
+.cosmetic-card{
+    border: 2px solid pink;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card2-cosmetics{
+    border: 2px solid purple;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 5px;
+}
