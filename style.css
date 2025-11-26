@@ -17,15 +17,53 @@
     padding: 20px;
     border-radius: 8px;
 }
+.cosmetics-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .cosmetic-card{
-    border: 2px solid pink;
+    border: 2px solid rgb(52, 122, 34);
     padding: 20px;
     border-radius: 8px;
+    margin: 10px;
+    width: 300px;
 }
-
+.cosmetics-container2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .card2-cosmetics{
     border: 2px solid purple;
     padding: 15px;
     border-radius: 8px;
     margin: 5px;
+    width: 300px;
+}
+
+
+/*event listener*/
+
+.switch{
+    display: inline-block;
+    border: none;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    color: white;
+}
+.on{
+    background-color: red;
+    color: black;
+    box-shadow:  inset 0px 0px 4px 1px rgba(0,0,0,0.2);
+}
+.bad{
+    height: 100px;
+    width: 100px;
+    background-color: red;
 }
