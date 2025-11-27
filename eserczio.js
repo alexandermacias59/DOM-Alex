@@ -171,9 +171,36 @@ function renderGameList(games) {
         titleSpan.appendChild(document.createTextNode('nome: ' + game.title));
         gameCard.appendChild(titleSpan);
 
+        const platformSpan = document.createElement('span');
+        platformSpan.appendChild(document.createTextNode('Piattaforma: ' + game.platform));
+        gameCard.appendChild(platformSpan);
+
+        const genreSpan = document.createElement('span');
+        genreSpan.appendChild(document.createTextNode('Genere: ' + game.genre.join(', ')));
+        gameCard.appendChild(genreSpan);
+
+        const releaseYearSpan = document.createElement('span');
+        releaseYearSpan.appendChild(document.createTextNode('Anno di rilascio: ' + game.releaseYear));
+        gameCard.appendChild(releaseYearSpan);
+
+        const developerSpan = document.createElement('span');
+        developerSpan.appendChild(document.createTextNode('Sviluppatore: ' + game.developer));
+        gameCard.appendChild(developerSpan);
+
+        const isMultiplayerSpan = document.createElement('span');
+        isMultiplayerSpan.appendChild(document.createTextNode('Multiplayer: ' + (game.isMultiplayer ? 'Sì' : 'No')));
+        gameCard.appendChild(isMultiplayerSpan);
+
+        const ratingSpan = document.createElement('span');
+        ratingSpan.appendChild(document.createTextNode('Recensioni: ' + game.rating+ ' stelle'));
+        gameCard.appendChild(ratingSpan);
+
         const priceSpan = document.createElement('span');
-        priceSpan.appendChild(document.createTextNode('price: $' + game.priceUSD));
+        priceSpan.appendChild(document.createTextNode('Prezzo: $' + game.priceUSD));
         gameCard.appendChild(priceSpan);
+
+        const isExclusiveSpan = document.createElement('span');
+        isExclusiveSpan.appendChild(document.createTextNode('Esclusiva Nintendo'+ (game.isExclusive ? 'Si': 'No')))
 
         gameCont.appendChild(gameCard);
 
