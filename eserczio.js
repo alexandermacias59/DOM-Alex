@@ -166,6 +166,7 @@ function renderGameList(games) {
     for (const game of games) {
 
         const gameCard = document.createElement('div');
+        gameCard.classList.add("game-cont-div");
 
         const titleSpan = document.createElement('span');
         titleSpan.appendChild(document.createTextNode('nome: ' + game.title));
