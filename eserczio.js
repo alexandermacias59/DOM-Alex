@@ -10,7 +10,8 @@ const nintendoGames = [
         isMultiplayer: false,
         rating: 97,
         priceUSD: 59.99,
-        isExclusive: true
+        isExclusive: true,
+        img: "https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_1920,q_auto:low/MNS/NOE/70010000000023/SQ_NSwitch_TheLegendOfZeldaBreathOfTheWild_E"
     },
     {
         title: "Super Mario Odyssey",
@@ -20,9 +21,9 @@ const nintendoGames = [
         developer: "Nintendo EPD",
         isMultiplayer: true,
         rating: 97,
-        priceUSD: 59.99,
-        isExclusive: true
-    },
+        priceUSD: 69.99,
+        isExclusive: true,
+        img: "https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_1920,q_auto:low/MNS/NOE/70010000000127/SQ_NSwitch_SuperMarioOdyssey_HomepageWithOverlay"    },
     {
         title: "Animal Crossing: New Horizons",
         platform: ["Nintendo Switch"],
@@ -31,8 +32,9 @@ const nintendoGames = [
         developer: "Nintendo EPD",
         isMultiplayer: true,
         rating: 90,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 29.99,
+        isExclusive: true,
+        img: "https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_992,q_auto:low/MNS/NOE/70010000027620/1.1_2000x2000_ProductTile_Switch_AnimalCrossingNewHorizons_KeyVisual_enGB_v1_100q"
     },
     {
         title: "Metroid Dread",
@@ -42,8 +44,9 @@ const nintendoGames = [
         developer: "MercurySteam, Nintendo EPD",
         isMultiplayer: false,
         rating: 88,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 19.99,
+        isExclusive: true,
+        img: "https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_992,q_auto:low/MNS/NOE/70010000042925/SQ_NSwitch_MetroidDread"
     },
     {
         title: "Splatoon 3",
@@ -53,8 +56,9 @@ const nintendoGames = [
         developer: "Nintendo EPD",
         isMultiplayer: true,
         rating: 83,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 39.99,
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Pokémon Scarlet and Violet",
@@ -65,7 +69,8 @@ const nintendoGames = [
         isMultiplayer: true,
         rating: 72,
         priceUSD: 59.99,
-        isExclusive: true
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Super Smash Bros. Ultimate",
@@ -75,8 +80,9 @@ const nintendoGames = [
         developer: "Bandai Namco Studios, Sora Ltd.",
         isMultiplayer: true,
         rating: 93,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 89.99,
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Mario Kart 8 Deluxe",
@@ -86,8 +92,9 @@ const nintendoGames = [
         developer: "Nintendo EAD",
         isMultiplayer: true,
         rating: 92,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 89.99,
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Fire Emblem: Three Houses",
@@ -97,8 +104,9 @@ const nintendoGames = [
         developer: "Intelligent Systems, Koei Tecmo",
         isMultiplayer: false,
         rating: 89,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 9.99,
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Luigi’s Mansion 3",
@@ -109,7 +117,8 @@ const nintendoGames = [
         isMultiplayer: true,
         rating: 86,
         priceUSD: 59.99,
-        isExclusive: true
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Donkey Kong Country: Tropical Freeze",
@@ -119,8 +128,9 @@ const nintendoGames = [
         developer: "Retro Studios",
         isMultiplayer: true,
         rating: 87,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 49.99,
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Xenoblade Chronicles 3",
@@ -130,8 +140,9 @@ const nintendoGames = [
         developer: "Monolith Soft",
         isMultiplayer: false,
         rating: 89,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 19.99,
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Kirby and the Forgotten Land",
@@ -141,8 +152,9 @@ const nintendoGames = [
         developer: "HAL Laboratory",
         isMultiplayer: true,
         rating: 85,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 49.99,
+        isExclusive: true,
+        img: ""
     },
     {
         title: "Bayonetta 3",
@@ -152,8 +164,9 @@ const nintendoGames = [
         developer: "PlatinumGames",
         isMultiplayer: false,
         rating: 87,
-        priceUSD: 59.99,
-        isExclusive: true
+        priceUSD: 9.99,
+        isExclusive: true,
+        img: ""
     }
 ]
 
@@ -168,8 +181,13 @@ function renderGameList(games) {
         const gameCard = document.createElement('div');
         gameCard.classList.add("game-cont-div");
 
+        const imgElement = document.createElement('img');
+        imgElement.src = game.img;
+        imgElement.alt = game.title;
+        gameCard.appendChild(imgElement);
+
         const titleSpan = document.createElement('span');
-        titleSpan.appendChild(document.createTextNode('nome: ' + game.title));
+        titleSpan.appendChild(document.createTextNode('Nome: ' + game.title));
         gameCard.appendChild(titleSpan);
 
         const platformSpan = document.createElement('span');
@@ -193,7 +211,7 @@ function renderGameList(games) {
         gameCard.appendChild(isMultiplayerSpan);
 
         const ratingSpan = document.createElement('span');
-        ratingSpan.appendChild(document.createTextNode('Recensioni: ' + game.rating+ ' stelle'));
+        ratingSpan.appendChild(document.createTextNode('Recensioni: ' + game.rating + '/100'));
         gameCard.appendChild(ratingSpan);
 
         const priceSpan = document.createElement('span');
@@ -212,24 +230,93 @@ function renderGameList(games) {
 renderGameList(nintendoGames);
 
 
-const orderTitleBtn = document.getElementById('title-order');
+//funzion per il bottone che ordina i giochi per titolo dalla A alla Z
 
-function compareTitles(g1, g2){
+const orderTitleBtnAsc = document.getElementById('title-order-asc');
+
+function compareTitlesAsc(g1, g2){
     return g1.title.localeCompare(g2.title);
 }
 
-function orderGamesByTitle(){
+function orderGamesByTitleAsc(){
 
-    nintendoGames.sort(compareTitles);
+    nintendoGames.sort(compareTitlesAsc);
 
     renderGameList(nintendoGames);
 
 }
 
-orderTitleBtn.addEventListener('click', orderGamesByTitle);
+orderTitleBtnAsc.addEventListener('click', orderGamesByTitleAsc);
+
+//funzion per il bottone che ordina i giochi per titolo dalla Z alla A
+
+const orderTitleBtnDesc = document.getElementById('title-order-desc');
+function compareTitlesDesc(g1, g2){
+    return g2.title.localeCompare(g1.title);
+}
+
+function orderGamesByTitleDesc(){
+
+    nintendoGames.sort(compareTitlesDesc);
+
+    renderGameList(nintendoGames);
+
+}
+
+orderTitleBtnDesc.addEventListener('click', orderGamesByTitleDesc);
+
+//funzione per il bottone che ordina i giochi per prezzo crescente
+
+const orderPriceBtnAsc = document.getElementById('price-order-asc');
+function comparePricesAsc(g1, g2){
+    return g1.priceUSD - g2.priceUSD;
+}
+function orderGamesByPriceAsc(){
+    nintendoGames.sort(comparePricesAsc);
+    renderGameList(nintendoGames);
+}
+
+orderPriceBtnAsc.addEventListener("click", orderGamesByPriceAsc)
 
 
+//funzione per il bottone che ordina i giochi per prezzo decrescente
 
+const orderPriceBtnDesc = document.getElementById('price-order-desc');
+function comparePricesDesc(g1, g2){
+    return g2.priceUSD - g1.priceUSD;
+}
+function orderGamesByPriceDesc(){
+    nintendoGames.sort(comparePricesDesc);
+    renderGameList(nintendoGames);
+}
+
+orderPriceBtnDesc.addEventListener("click", orderGamesByPriceDesc)
+
+//funzione per il bottone che ordina i giochi per rating crescente
+
+const orderRatingBtnAsc = document.getElementById('rating-order-asc');
+function compareRatingsAsc(g1, g2){
+    return g1.rating - g2.rating;
+}
+function orderGamesByRatingAsc(){
+    nintendoGames.sort(compareRatingsAsc);
+    renderGameList(nintendoGames);
+}
+
+orderRatingBtnAsc.addEventListener("click", orderGamesByRatingAsc);
+
+//funzione per il bottone che ordina i giochi per rating decrescente
+
+const orderRatingBtnDesc = document.getElementById('rating-order-desc');
+function compareRatingsDesc(g1, g2){
+    return g2.rating - g1.rating;
+}
+function orderGamesByRatingDesc(){
+    nintendoGames.sort(compareRatingsDesc);
+    renderGameList(nintendoGames);
+}
+
+orderRatingBtnDesc.addEventListener("click", orderGamesByRatingDesc);
 
 /// completare le schede dei giochi rendendole molto belle! (con tutte le proprietà)
 /// aggiungere l'ordinamento per prezzo (dal più economico al più caro)
