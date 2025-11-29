@@ -7,10 +7,26 @@ html, body {
 header {
     padding: 10px;
     background-color: rgb(230, 0, 18);
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.div-nav1{
+    display: flex;
+}
+.div-nav2{
+    display: flex;
+    gap: 30px;
 }
 h1 {
     text-align: center;
     color : white;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 110px;
+    font-size: 22px;
 }
 h2 {
     text-align: center;
