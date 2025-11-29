@@ -58,7 +58,7 @@ const nintendoGames = [
         rating: 83,
         priceUSD: 39.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_nswitch_splatoon3_old/1x1_NSwitch_Splatoon3_image500w.jpg"
     },
     {
         title: "Pokémon Scarlet and Violet",
@@ -70,7 +70,7 @@ const nintendoGames = [
         rating: 72,
         priceUSD: 59.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_PokemonScarletViolet_Combo_itIT_image500w.jpg"
     },
     {
         title: "Super Smash Bros. Ultimate",
@@ -82,7 +82,7 @@ const nintendoGames = [
         rating: 93,
         priceUSD: 89.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_SuperSmashBrosUltimate_02_image500w.jpg"
     },
     {
         title: "Mario Kart 8 Deluxe",
@@ -94,7 +94,7 @@ const nintendoGames = [
         rating: 92,
         priceUSD: 89.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_MarioKart8Deluxe_image500w.jpg"
     },
     {
         title: "Fire Emblem: Three Houses",
@@ -106,7 +106,7 @@ const nintendoGames = [
         rating: 89,
         priceUSD: 9.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_FireEmblemThreeHouses_image500w.jpg"
     },
     {
         title: "Luigi’s Mansion 3",
@@ -118,7 +118,7 @@ const nintendoGames = [
         rating: 86,
         priceUSD: 59.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_LuigisMansion3_image500w.jpg"
     },
     {
         title: "Donkey Kong Country: Tropical Freeze",
@@ -130,7 +130,7 @@ const nintendoGames = [
         rating: 87,
         priceUSD: 49.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_DonkeyKongCountryTropicalFreeze_image500w.jpg"
     },
     {
         title: "Xenoblade Chronicles 3",
@@ -142,7 +142,7 @@ const nintendoGames = [
         rating: 89,
         priceUSD: 19.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_XenobladeChronicles3_image500w.jpg"
     },
     {
         title: "Kirby and the Forgotten Land",
@@ -154,7 +154,7 @@ const nintendoGames = [
         rating: 85,
         priceUSD: 49.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_KirbyAndTheForgottenLand_onlylogo_itIT_image500w.jpg"
     },
     {
         title: "Bayonetta 3",
@@ -166,7 +166,7 @@ const nintendoGames = [
         rating: 87,
         priceUSD: 9.99,
         isExclusive: true,
-        img: ""
+        img: "https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/1x1_NSwitch_Bayonetta3_image500w.jpg"
     }
 ]
 
@@ -229,6 +229,13 @@ function renderGameList(games) {
 
 renderGameList(nintendoGames);
 
+//Bottone per mostrare i filtri
+const showBtns = document.getElementById("show-filters");
+function showFilterBtns(){
+    const showDiv = document.querySelector(".btns-container");
+    showDiv.classList.toggle("show-display");
+}
+showBtns.addEventListener("click", showFilterBtns);
 
 //funzion per il bottone che ordina i giochi per titolo dalla A alla Z
 

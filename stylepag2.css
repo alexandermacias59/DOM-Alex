@@ -16,6 +16,19 @@ h2 {
     text-align: center;
     color: rgb(0, 102, 204);
 }
+#show-filter{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btns-container {
+    text-align: center;
+    margin: 20px 0;
+    display: none;
+}
+.show-display{
+    display: block;
+}
 #game-container {
     display: flex;
     flex-wrap: wrap;
