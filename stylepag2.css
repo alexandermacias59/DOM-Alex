@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    box-sizing: border-box;
 }
 header {
     padding: 10px;
@@ -27,14 +28,14 @@ h1 {
     
 }
 
-#show-filter{
+#show-filters{
     text-align: center;
-    margin: 20px 0;
+    margin: 25px;
 }
 
 .btns-container {
     text-align: center;
-    margin: 20px 0;
+    margin: 25px 0;
     display: none;
 }
 .show-display{
@@ -68,6 +69,12 @@ h1 {
     transform: translateY(-5px);
     transition: all 0.3s ease;
 }
+.div-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
 button {
     margin: 5px;
     padding: 10px 15px;
@@ -81,4 +88,21 @@ button {
 button:hover {
     background-color: rgb(153, 0, 12);
     transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    #game-container {
+        flex-direction: row;
+        justify-content: center;
+        min-width: auto;
+        
+    }
+    .game-cont-div {
+        flex-direction: column;
+    }
+    .div-img img {
+        width: 100%;
+    }
+
 }

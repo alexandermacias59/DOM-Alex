@@ -181,43 +181,48 @@ function renderGameList(games) {
         const gameCard = document.createElement('div');
         gameCard.classList.add("game-cont-div");
 
+        const divImg = document.createElement("div");
+        divImg.classList.add("div-img");
+        gameCard.appendChild(divImg);
+
         const imgElement = document.createElement('img');
         imgElement.src = game.img;
         imgElement.alt = game.title;
-        gameCard.appendChild(imgElement);
+        divImg.appendChild(imgElement);
+
+        const divContent = document.createElement("div");
+        divContent.classList.add("div-content");
+        gameCard.appendChild(divContent);
 
         const titleSpan = document.createElement('span');
         titleSpan.appendChild(document.createTextNode('Nome: ' + game.title));
-        gameCard.appendChild(titleSpan);
+        divContent.appendChild(titleSpan);
 
         const platformSpan = document.createElement('span');
         platformSpan.appendChild(document.createTextNode('Piattaforma: ' + game.platform));
-        gameCard.appendChild(platformSpan);
-
+        divContent.appendChild(platformSpan);
         const genreSpan = document.createElement('span');
         genreSpan.appendChild(document.createTextNode('Genere: ' + game.genre.join(', ')));
-        gameCard.appendChild(genreSpan);
+        divContent.appendChild(genreSpan);
 
         const releaseYearSpan = document.createElement('span');
         releaseYearSpan.appendChild(document.createTextNode('Anno di rilascio: ' + game.releaseYear));
-        gameCard.appendChild(releaseYearSpan);
+        divContent.appendChild(releaseYearSpan);
 
         const developerSpan = document.createElement('span');
         developerSpan.appendChild(document.createTextNode('Sviluppatore: ' + game.developer));
-        gameCard.appendChild(developerSpan);
+        divContent.appendChild(developerSpan);
 
         const isMultiplayerSpan = document.createElement('span');
         isMultiplayerSpan.appendChild(document.createTextNode('Multiplayer: ' + (game.isMultiplayer ? 'Sì' : 'No')));
-        gameCard.appendChild(isMultiplayerSpan);
-
+        divContent.appendChild(isMultiplayerSpan);
         const ratingSpan = document.createElement('span');
         ratingSpan.appendChild(document.createTextNode('Recensioni: ' + game.rating + '/100'));
-        gameCard.appendChild(ratingSpan);
+        divContent.appendChild(ratingSpan);
 
         const priceSpan = document.createElement('span');
         priceSpan.appendChild(document.createTextNode('Prezzo: $' + game.priceUSD));
-        gameCard.appendChild(priceSpan);
-
+        divContent.appendChild(priceSpan);
         const isExclusiveSpan = document.createElement('span');
         isExclusiveSpan.appendChild(document.createTextNode('Esclusiva Nintendo'+ (game.isExclusive ? 'Si': 'No')))
 
