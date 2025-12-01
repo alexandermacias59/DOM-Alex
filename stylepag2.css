@@ -14,14 +14,17 @@ nav{
     display: flex;
     justify-content: space-between;
 }
-.div-nav1{
+.nav1-div{
     display: flex;
     align-items: center;
 }
-.div-nav2{
+.nav2-div{
     display: flex;
     gap: 30px;
     align-items: center;
+}
+.nav2-div div:hover{
+    color: #ccc;
 }
 h1 {
     text-align: center;
@@ -92,6 +95,9 @@ button:hover {
 
 
 @media (max-width: 768px) {
+    .nav-logo{
+        display: none;
+    }
     #game-container {
         flex-direction: row;
         justify-content: center;
@@ -104,5 +110,5 @@ button:hover {
     .div-img img {
         width: 100%;
     }
-
+   
 }
