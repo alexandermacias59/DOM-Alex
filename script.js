@@ -513,3 +513,13 @@ switchBtn.addEventListener("click",swtichOn);
 const badDiv = document.getElementById("bad-div");
 badDiv.addEventListener("mouseenter", () => badDiv.innerHTML = "che fai? mi tocchi?");
 badDiv.addEventListener("mouseleave", () => badDiv.innerHTML = "fai attenzione!!!")
+
+
+//Style
+const styleDiv = document.getElementById("style-div");
+styleDiv.style.backgroundColor = "violet";
+
+//set attribute
+const marioImage = document.getElementById("mario-image");
+marioImage.setAttribute("width", "100");
+marioImage.setAttribute("pippo", "pluto")

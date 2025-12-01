@@ -16,6 +16,7 @@ nav{
 }
 .nav1-div{
     display: flex;
+    gap: 20px;
     align-items: center;
 }
 .nav2-div{
@@ -25,6 +26,10 @@ nav{
 }
 .nav2-div div:hover{
     color: #ccc;
+    cursor: pointer;
+}
+.nav-hamburger:hover {
+    cursor: pointer;
 }
 h1 {
     text-align: center;
@@ -38,7 +43,7 @@ h1 {
 
 .btns-container {
     text-align: center;
-    margin: 25px 0;
+    margin: 15px;
     display: none;
 }
 .show-display{
